@@ -272,7 +272,7 @@ h4 {
 
 
 
-header li>a {
+:where(.off-canvas, header) li>a {
     display: flex;
     position: relative;
     line-height: inherit;
@@ -376,12 +376,12 @@ header li>a {
 .circle::before {
     content: '';
     position: absolute;
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     border-radius: var(--percent50);
     background-color: var(--secoundary-color);
-    bottom: 5px;
-    right: 5px;
+    bottom: 3px;
+    right: 3px;
     opacity: .4;
 }
 
@@ -474,6 +474,14 @@ nav .fly-item {
     align-items: center;
 }
 
+.dpt-menu .has-child:hover ul  {
+    display: block;
+}
+
+.dpt-menu .has-child li a:hover {
+    text-decoration: underline;
+}
+
 
 
 .header-main .right {
@@ -522,6 +530,81 @@ form.search button:hover {
     background-color: var(--dark-color);
 }
 
+
+.site-off {
+    position: fixed;
+    width: 320px;
+    height: var(--percent100);
+    background-color: var(--white-color);
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.off-canvas {
+    width: var(--percent100);
+    height: var(--percent100);
+    touch-action: auto;
+    padding: 1.5em;
+}
+
+.off-canvas .canvas-head {
+    color: var(--white-color);
+    justify-content: space-between;
+    padding: 1.5em;
+    margin: -1.5em -1.5em 1.5em;
+    background-color: var(--secoundary-dark-color);
+    border-bottom-right-radius: 160px 25px;
+
+}
+
+.off-canvas .canvas-head .logo {
+    z-index: 10;
+    position: relative;
+}
+
+.off-canvas .canvas-head .logo .circle {
+    opacity: .75;
+}
+
+.t-close {
+    font-size: 1.25em;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--percent50);
+    background-color: var(--secoundary-dark-color);
+    color: var(--white-color);
+    transition: var(--trans-background-color);
+}
+.t-close:hover {
+    background-color: var(--white-color);
+    color: var(--secoundary-dark-color);
+    opacity: .75;
+}
+
+.off-canvas .dpt-head {
+    font-size: var(--font-small);
+    padding: 1em;
+    margin-top: 1em;
+    text-align: center;
+    background-color: var(--light-bg-color);
+    border-radius: 7px 7px 0 0;
+}
+
+.off-canvas .has-child > :where(ul, .mega){
+    font-size: var(--font-small);
+    font-weight: var(--fw3);
+    line-height: 28px;
+    padding-left: 3em;
+}
+
+.off-canvas .thetop-nav ul, .off-canvas nav >ul {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: var(--font-small);
+    line-height: 36px;
+    padding-top: 1.25em;
+    border-top: 1px solid var(--border-color);
+}
 
 
 
@@ -682,10 +765,32 @@ form.search button:hover {
         border: 1px solid var(--border-color);
         border-top: 0;
         display: none;
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: auto;
 
     }
-    .dpt-menu .has-child:nth-child(1) > ul {
-        display: block;
+    .dpt-menu .mega {
+        display: none;
+    }
+    .dpt-menu .beauty ul {
+        background-image: url(assets/menu/menu_bg1.jpg);
+    }
+    .dpt-menu .electric ul {
+        background-image: url(assets/menu/menu_bg2.jpg);
+    }
+    .dpt-menu .fashion ul {
+        background-image: url(assets/menu/menu_bg3.jpg);
+    }
+    .dpt-menu .homekit .mega {
+        background-image: url(assets/menu/menu_bg4.jpg);
+    }
+    .dpt-menu .mega {
+        width: auto;
+        min-height: var(--percent100);
+    }
+    .has-child:hover .mega {
+        display: flex;
     }
 
 
