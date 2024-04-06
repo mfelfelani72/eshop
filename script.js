@@ -19,15 +19,15 @@ const menuButton = document.querySelector('.trigger'),
     closeButton = document.querySelector('.t-close'),
     addClass = document.querySelector('.site');
 
-    menuButton.addEventListener('click',function(){
-        addClass.classList.toggle('showmenu')
-    })
-    closeButton.addEventListener('click',function(){
-        addClass.classList.remove('showmenu')
-    })
+menuButton.addEventListener('click', function () {
+    addClass.classList.toggle('showmenu')
+})
+closeButton.addEventListener('click', function () {
+    addClass.classList.remove('showmenu')
+})
 
 
-    const submenu = document.querySelectorAll('.has-child');
+const submenu = document.querySelectorAll('.has-child');
 submenu.forEach((menu) => menu.addEventListener('click', toggle));
 function toggle(e) {
     e.preventDefault();
@@ -36,3 +36,14 @@ function toggle(e) {
         this.closest('.has-child').classList.toggle('expand');
 
 }
+
+const swiper = new Swiper('.swiper', {
+
+    loop: true,
+    autoplay: {
+        delay: 5000,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+    },
+});

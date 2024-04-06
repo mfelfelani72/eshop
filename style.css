@@ -612,11 +612,11 @@ form.search button:hover {
 
     height: auto;
     max-height: 0;
-    overflow:hidden ;
-    transition: max-height .3s cubic-bezier(0.215, 0.610,0.355,1) ;
+    overflow: hidden;
+    transition: max-height .3s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
-.off-canvas .expand > :where(ul,.mega){
+.off-canvas .expand> :where(ul, .mega) {
     max-height: 2000px;
 }
 
@@ -670,6 +670,99 @@ form.search button:hover {
     margin: 0 0.5em 0.5em 0;
 }
 
+.slider .item {
+    position: relative;
+    height: 427px;
+}
+
+.slider .item::before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 450px;
+    height: 300px;
+    background-color: var(--white-color);
+    z-index: 1;
+    filter: blur(50px);
+    opacity: .8;
+}
+
+
+.slider .text-content {
+    position: relative;
+    height: var(--percent100);
+    justify-content: flex-end;
+    padding: 0 0 10% 10%;
+    z-index: 1;
+}
+
+.slider h4 {
+    font-size: var(--font-small);
+    font-weight: var(--fw7);
+    width: fit-content;
+    padding: 4px 10px;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    border-radius: 4px;
+}
+
+.text-content :where(h2, h3) span:first-child {
+    font-weight: var(--fw3);
+    columns: var(--light-text-color);
+}
+
+.text-content :where(h2, h3) span:last-child {
+    color: var(--secoundary-dark-color);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--secoundary-dark-color);
+}
+
+
+.brands .wrapper {
+
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2em 0;
+}
+
+.brands .item img {
+    opacity: .25;
+    transition: opacity .3s;
+}
+
+.brands .item a:hover img {
+    opacity: 1;
+}
+
+.sectop {
+    justify-content: space-between;
+    padding-bottom: -0.9em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sectop h2 {
+    position: relative;
+    font-size: 1.5em;
+    font-weight: var(--fw7);
+}
+
+.sectop h2 span:not(.circle) {
+    padding: 0 0 0 2em;
+}
+
+.sectop h2 .circle {
+    top: 0px;
+}
+
+.trending .products {
+    flex: 0 0 33.333%;
+}
 
 
 
@@ -867,5 +960,12 @@ form.search button:hover {
         display: flex;
     }
 
+    .slider>div>.wrapper {
+
+        width: calc(100% - 330px);
+        margin-left: auto;
+
+
+    }
 
 }
