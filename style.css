@@ -879,7 +879,7 @@ form.search button:hover {
     flex-direction: column;
 }
 
-.products:where(.big, .main-one) .content {
+.products:where(.big, .main, .one) .content {
     gap: 1em;
     margin-top: 1.25em;
 }
@@ -973,15 +973,16 @@ form.search button:hover {
 
 .products.mini .media {
     width: 130px;
-    height: 160px;
+    height: 180px;
     margin-left: 1.25em;
 }
 
 .products.mini .content {
     margin: 0;
     gap: 0.75em;
-    padding-left : 15px;
+    padding-left: 15px;
 }
+
 .products.mini .content .mini-links {
     margin: 0;
 }
@@ -990,6 +991,49 @@ form.search button:hover {
     font-weight: 400;
 }
 
+.products.main .item {
+    flex-direction: column;
+    flex: 0 0 100%;
+    padding: 0 0.938em;
+    padding-bottom: 2em;
+}
+
+.products.main .media {
+    height: 390px;
+}
+
+.products.main .footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0 1em 1em;
+    border-radius: 7px;
+    z-index: 1;
+    background: linear-gradient(0deg, var(--light-bg-color) 0%, var(--white-color) 70%);
+    opacity: 0;
+    visibility: hidden;
+    will-change: opacity;
+    transition: all .2s ease-in-out;
+
+}
+
+.products.main .item:hover .footer {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.products.main .footer ul {
+    list-style: disc;
+    padding: 1.25em 0 0 1.25em;
+    line-height: 1.8;
+    border-top: 1px solid var(--border-color);
+    margin-top: 145px;
+}
+
+.products.main .item:hover .content>*:not(.footer) {
+    z-index: 3;
+}
 
 
 
@@ -1019,6 +1063,18 @@ form.search button:hover {
 
 
 
+
+
+
+
+
+@media screen and (min-width: 481px) {
+
+    .products.main .item {
+        flex: 0 0 50%;
+    }
+
+}
 
 
 
@@ -1026,6 +1082,14 @@ form.search button:hover {
 @media screen and (min-width: 768px) {
     .products .price .current {
         font-size: 1.25em;
+    }
+
+    .products.mini {
+        flex: 0 0 50%;
+    }
+
+    .products.main .item {
+        flex: 0 0 33.3333%;
     }
 }
 
@@ -1223,6 +1287,10 @@ form.search button:hover {
 
     .products.big .media {
         max-height: 373px;
+    }
+
+    .products.main .item {
+        flex: 0 0 25%;
     }
 
 }
