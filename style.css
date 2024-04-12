@@ -1401,7 +1401,7 @@ form.search button:hover {
 }
 
 .products .variant input {
-    clip: rect(0,0,0,0);
+    clip: rect(0, 0, 0, 0);
     overflow: hidden;
     position: absolute;
     height: 0;
@@ -1435,10 +1435,10 @@ form.search button:hover {
 .single-product .variant input:checked~label {
     background-color: transparent;
     border: 2px solid var(--dark-color);
-    color : var(--white-color)
+    color: var(--white-color)
 }
 
-.products .sizes .variant label::before{
+.products .sizes .variant label::before {
     background-color: var(--white-color);
 }
 
@@ -1483,7 +1483,7 @@ form.search button:hover {
     text-align: center;
 }
 
-.products .qty-control button::before{
+.products .qty-control button::before {
     background-color: transparent;
 }
 
@@ -1505,6 +1505,127 @@ form.search button:hover {
     margin: 1em 2em 1em 0;
     transition: var(--trans-color);
 }
+
+.products .collapse .has-child>a {
+    position: relative;
+    font-weight: var(--fw7);
+    text-transform: uppercase;
+    padding: 1em 1.25em;
+    border-top: 1px solid var(--border-color);
+}
+
+.products .collapse .has-child>a::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+}
+
+.products .collapse .content {
+    margin: 0 0 1.5em 2em;
+    font-size: var(--font-small);
+}
+
+.products .collapse .content li span:first-child {
+    min-width: 100px;
+    display: inline-flex;
+    font-weight: var(--fw7);
+    text-transform: uppercase;
+}
+
+.products .collapse table {
+    line-height: 3em;
+}
+
+.products .collapse table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid var(--dark-color);
+}
+
+.products .collapse table :where(th, td) {
+    border-bottom: 1px solid var(--border-color);
+    padding-left: 2em;
+}
+
+.products .collapse .content {
+    display: none;
+}
+
+.products .collapse .expand .content {
+    display: flex;
+}
+
+.products .collapse .expand > a::before {
+    content: '-';
+}
+
+.products .reviews h4 {
+    font-size: 2em;
+    color: var(--light-text-color);
+    padding-top: 1em;
+    margin: 1em 0 0.5em;
+    border-top: 1px solid var(--border-color);
+}
+
+.products .review-block {
+    color: initial;
+}
+
+.products .review-block-head > a {
+    display: block;
+    font-size: 1.25em;
+    width: var(--percent100);
+    margin-top: 1em;
+    text-align: center;
+}
+
+.products .review-block-head .rate-sum {
+    position: relative;
+    font-size: 4em;
+    font-weight: var(--fw7);
+    padding-right: 0.5em;
+
+}
+
+.products .review-block-head .rate-sum::before {
+    content: '';
+    width: 2px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    transform: rotate(22deg);
+    background-color: var(--light-bg-color);
+}
+
+.products .review-block-head .item {
+    gap: 1em;
+    padding-bottom: 2.5em;
+    margin-top: 3.5em;
+}
+
+.products .review-block-body :where(.person, .review-title){
+    font-weight: var(--fw7);
+    text-transform: uppercase;
+}
+
+.products .review-block-body .review-title {
+    font-size: 1.25em;
+    justify-content: end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
