@@ -27,7 +27,7 @@ closeButton.addEventListener('click', function () {
 })
 
 
-const submenu = document.querySelectorAll('.has-child');
+const submenu = document.querySelectorAll('.has-child .icon-small');
 submenu.forEach((menu) => menu.addEventListener('click', toggle));
 function toggle(e) {
     e.preventDefault();
