@@ -1683,7 +1683,7 @@ form label {
     color: initial;
 }
 
-.page-single .stock .bar {
+.single.product .stock .bar {
     height: 10px;
 }
 
@@ -1712,6 +1712,10 @@ form label {
     height: 28px;
     font-size: var(--font-small);
     padding: 0.5em 0 0.25em;
+}
+
+.related-products .contents .stock {
+    margin-top: auto;
 }
 
 
