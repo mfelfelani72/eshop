@@ -471,9 +471,151 @@
             <div class="single-checkout">
                 <div class="container">
                     <div class="wrapper">
-
-                        
-
+                        <div class="checkout flexwrap">
+                            <div class="item left styled">
+                                <h1>Shipping Address</h1>
+                                <form action="">
+                                    <p>
+                                        <label for="email">Email Address <span></span></label>
+                                        <input type="email" name="email" id="email" autocomplete="off" required>
+                                    </p>
+                                    <p>
+                                        <label for="fname">First name <span></span></label>
+                                        <input type="text" id="fname" required>
+                                    </p>
+                                    <p>
+                                        <label for="lname">Last name <span></span></label>
+                                        <input type="text" id="lname" required>
+                                    </p>
+                                    <p>
+                                        <label for="cname">Company name</label>
+                                        <input type="text" id="cname">
+                                    </p>
+                                    <p>
+                                        <label for="address">Street Address <span></span></label>
+                                        <input type="text" id="address" required>
+                                    </p>
+                                    <p>
+                                        <label for="city">City <span></span></label>
+                                        <input type="text" id="city" required>
+                                    </p>
+                                    <p>
+                                        <label for="state">State/Provience <span></span></label>
+                                        <input type="text" id="state" required>
+                                    </p>
+                                    <p>
+                                        <label for="postal">Zip / Postal Code <span></span></label>
+                                        <input type="number" id="postal" required>
+                                    </p>
+                                    <p>
+                                        <label for="country">Country</label>
+                                        <select name="country" id="country">
+                                            <option value="1">Iran</option>
+                                            <option value="2">Russian</option>
+                                            <option value="3">Armenia</option>
+                                            <option value="4">other</option>
+                                        </select>
+                                    </p>
+                                    <p>
+                                        <label for="phone">Phone <span></span></label>
+                                        <input type="number" id="phone" required>
+                                    </p>
+                                    <p>
+                                        <label>Order Notes (optional)</label>
+                                        <textarea cols="30" rows="10"></textarea>
+                                    </p>
+                                    <p class="checkset">
+                                        <input type="checkbox" id="anaccount">
+                                        <label for="anaccount">Create an account?</label>
+                                    </p>
+                                </form>
+                                <div class="shippng-methods">
+                                    <h2>Shipping Methods</h2>
+                                    <p class="checkset">
+                                        <input type="radio" checked>
+                                        <label>$5.00 Flate Rate</label>
+                                    </p>
+                                </div>
+                                <div class="primary-checkout">
+                                    <button class="primary-button">Place Order</button>
+                                </div>
+                            </div>
+                            <div class="item right">
+                                <h1>Order Summary</h1>
+                                <div class="summary-order is_sticky">
+                                    <div class="summary-totals">
+                                        <ul class="pl-0">
+                                            <li>
+                                                <span>Subtotal</span>
+                                                <span>$2155.95</span>
+                                            </li>
+                                            <li>
+                                                <span>Discount</span>
+                                                <span>-$100.00</span>
+                                            </li>
+                                            <li>
+                                                <span>Shipping: Flat</span>
+                                                <span>$10.00</span>
+                                            </li>
+                                            <li>
+                                                <span>Total</span>
+                                                <strong>$2065.95</strong>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <ul class="products mini pl-0">
+                                        <li class="item">
+                                            <div class="thumbnail object-cover">
+                                                <img src="assets/products/home2.jpg" alt="">
+                                            </div>
+                                            <div class="item-content">
+                                                <p class="m-0">Dimmable Ceiling Light Moderns</p>
+                                                <soan class="price">
+                                                    <span>$279.00</span>
+                                                    <span>x 2</span>
+                                                </soan>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="thumbnail object-cover">
+                                                <img src="assets/products/home3.jpg" alt="">
+                                            </div>
+                                            <div class="item-content">
+                                                <p class="m-0">Dimmable Ceiling Light Moderns</p>
+                                                <soan class="price">
+                                                    <span>$279.00</span>
+                                                    <span>x 2</span>
+                                                </soan>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="thumbnail object-cover">
+                                                <img src="assets/products/home4.jpg" alt="">
+                                            </div>
+                                            <div class="item-content">
+                                                <p class="m-0">Dimmable Ceiling Light Moderns</p>
+                                                <soan class="price">
+                                                    <span>$279.00</span>
+                                                    <span>x 2</span>
+                                                </soan>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="thumbnail object-cover">
+                                                <img src="assets/products/home5.jpg" alt="">
+                                            </div>
+                                            <div class="item-content">
+                                                <p class="m-0">Dimmable Ceiling Light Moderns</p>
+                                                <soan class="price">
+                                                    <span>$279.00</span>
+                                                    <span>x 2</span>
+                                                </soan>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -642,6 +784,33 @@
                     </form>
                 </div>
             </div>
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="content flexcol">
+                <div class="image object-cover">
+                    <img src="assets/products/apparel4.jpg" alt="">
+                </div>
+                <h2>Get the latest deals and coupons</h2>
+                <p class="mobile-hide">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis labore non
+                    fugiat ipsam voluptates saepe?</p>
+                <form action="" class="search">
+                    <span class="icon-large"><i class="ri-mail-line"></i></span>
+                    <input type="text" placeholder="Your email address">
+                    <button>Subscribe</button>
+                </form>
+                <a href="#" class="mini-text">Do not show me this again</a>
+                <a href="#" class="t-close modalclose flexcenter">
+                    <i class="ri-close-line"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="backtotop">
+            <a href="#" class="flexcol">
+                <i class="ri-arrow-up-line"></i>
+                <span>Top</span>
+            </a>
         </div>
 
         <div class="overlay"></div>
